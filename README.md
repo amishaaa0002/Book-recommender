@@ -1,2 +1,2 @@
 # Book-recommender
-A book recommender machine learning model which recommends books by using collaborative filtering algorithm.
+A responsive web based book recommender system which uses machine learning model(uses collabarative filtering) in the backend and recommends books based on users choice.
