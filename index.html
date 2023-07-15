@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Book Recommender System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  </head>
+
+  <style>
+    .text-white{
+    color:white
+    }
+    .text-b{
+    color:black
+    }
+  </style>
+  <body style="background-color: black">
+
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid" style="background-color : red">
+    <a class="navbar-brand" href="#" >My Book Recommender</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/recommend">Recommend</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+    </div>
+</nav>
+
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-white">Top 50 Books</h1>
+        </div>
+
+
+        {% for i in range(book_name|length) %}
+           <div class="col-md-2" style="margin-top:30px">
+              <div class="card">
+                <div class="card-body">
+                  <img class="card-img-top" src="{{ book_url[i]}}">
+                  <h5 class="text-b">{{book_name[i]}}</h5>
+                  <p class="text-b">{{book_author[i]}}</p>
+                  <p class="text-b">{{book_rating[i]}}</p>
+                  <p class="text-b">{{book_avg_rating[i]}}</p>
+                </div>
+              </div>
+          </div>
+        {% endfor %}
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </body>
+</html>
